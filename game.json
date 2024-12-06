@@ -1,0 +1,10 @@
+[
+    {
+        "hint": "A type of fruit",
+        "words": ["apple", "banana", "cherry"]
+    },
+    {
+        "hint": "A type of animal",
+        "words": ["lion", "tiger", "bear"]
+    }
+]
