@@ -48,7 +48,8 @@ class WordGuessGame(QWidget):
 
         # Add animated background
         self.background_label = QLabel(self)
-        self.background_movie = QMovie(random.choice(self.gifs_abertura))  # Path to your GIF
+        #self.background_movie = QMovie(random.choice(self.gifs_abertura))  # Path to your GIF
+        self.background_movie = QMovie("idea.gif")  # Path to your GIF
         self.background_label.setMovie(self.background_movie)
         self.background_movie.start()
 
@@ -83,7 +84,7 @@ class WordGuessGame(QWidget):
             color: black;
             border: 2px solid black;
             background-color: white;
-            padding: 5px;
+            padding: 0 px;
             """
         )
         self.input_layout.addWidget(self.letter_input)
@@ -299,7 +300,8 @@ class WordGuessGame(QWidget):
     def next_puzzle(self):
         self.current_puzzle = get_random_int(0, self.total_puzzles, self.used_puzzles)
         self.used_puzzles.append(self.current_puzzle)
-        self.background_movie = QMovie(random.choice(self.gifs_abertura))
+        #self.background_movie = QMovie(random.choice(self.gifs_abertura))
+        self.background_movie = QMovie("idea.gif")
         self.background_label.setMovie(self.background_movie)
         self.background_movie.start()
         self.load_puzzle()
